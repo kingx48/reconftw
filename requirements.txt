@@ -40,3 +40,4 @@ setuptools
 slowapi
 starlette
 uvicorn
+flask

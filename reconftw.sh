@@ -2638,6 +2638,12 @@ fi
 
 startdir=${PWD}
 
+if [ -n "$WEBSN1PER_RATE_LIMIT" ]; then
+    alias ffuf="ffuf -rate $WEBSN1PER_RATE_LIMIT"
+    alias httpx="httpx -rate-limit $WEBSN1PER_RATE_LIMIT"
+    alias nuclei="nuclei -rate-limit $WEBSN1PER_RATE_LIMIT"
+fi
+
 banner
 
 check_version
